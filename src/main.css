@@ -1,0 +1,113 @@
+body {
+    margin: 20px;
+    background-color: bisque;
+    text-align:center;
+  }
+  
+  .sidebar {
+          grid-area: sidebar;
+      }
+  
+      .sidebar2 {
+          grid-area: sidebar2;
+      }
+  
+      .content {
+          grid-area: content;
+      }
+  
+      .header {
+          grid-area: header;
+      }
+  
+      .footer {
+          grid-area: footer;
+      }
+  
+      .wrapper {
+          color: #444;
+
+      }
+  
+    .wrapper {
+      display: grid;
+      grid-gap: 1em;
+      grid-template-areas:
+       "header"
+       "sidebar2"
+       "sidebar"
+       "content"
+       "footer";
+       min-width: 600px;
+    }
+  
+      @media only screen and (min-width: 500px)  {
+      .wrapper {
+  
+          grid-template-columns: 20% auto;
+          grid-template-areas:
+      "header   header"
+          "sidebar2 sidebar2"
+          "sidebar  content"
+          "footer   footer";
+      }
+      }
+  
+      @media only screen and (min-width: 1600px)   {
+          .wrapper {
+        grid-gap: 20px;
+              grid-template-columns: 120px auto 120px;
+              grid-template-areas:
+        "header  header  header"
+              "sidebar2 sidebar2 sidebar2"
+              "sidebar content "
+              "footer  footer  footer";
+              max-width: 2000px;
+          }
+      }
+  
+  .box {
+    background-color: rgba(192, 48, 55, 0.897);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 150%; 
+  }
+  
+  .header,
+  .footer {
+    background-color: rgba(219, 80, 173, 0.685);
+  }
+  
+  .sidebar2 {
+    background-color: rgba(216, 44, 102, 0.767);
+    color: #444;
+  }
+
+  .logo {
+      width: 150px;
+      margin-inline-start: 10px;
+      margin-block-start: 10px;
+      margin-block-end: 10px;
+      float: left;
+  }
+
+  .header_title{
+      margin-inline-start: 20px;
+      margin-block-start: 40px;
+      float: left;
+  }
+  .sidebar{
+      min-block-size:800px;
+      max-block-size: 1500px;
+      grid-auto-rows: minmax(500px, auto);
+  }
+
+  a:link { text-decoration: none;color: rgba(240, 170, 41, 0.87)}
+　　 a:active { text-decoration:blink}
+　　 a:hover { text-decoration:underline;color: red} 
+　　 a:visited { text-decoration: none;color: rgba(131, 7, 83, 0.692)}
+.menu{
+    float: left;
+    margin-inline-start: 50px;
+}
